@@ -10,10 +10,10 @@ async function initMap() {
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
   // The map, centered at Tokyo
-  map = new Map(document.getElementById("map"), {
+  map = new google.maps.Map(document.getElementById("map"), {
     zoom: 12,
     center: position,
-    mapId: "DEMO_MAP_ID",
+    mapId: "c62343e0349f2347",
   });
 
   // The marker, positioned at Tokyo
@@ -21,6 +21,7 @@ async function initMap() {
     map: map,
     position: position,
     title: "Tokyo",
+    gestureHandling: "greedy",
   });
 }
 
